@@ -21,8 +21,11 @@ def get_md5(input):
 def factorial(resl = 'reslult'):
     num = int(input('Input a number to complete factorial: '))
     resl = math.factorial(num)
-    return f'Output: {resl}'
+    return jsonify(
+        f'Input: {num}', 
+        f'Output: {resl}'
 
+    )
 
 
 #  prime check endpoint
