@@ -15,6 +15,34 @@ SLACK_URL = 'https://hooks.slack.com/services/T257UBDHD/B01CKRMG7PC/hyZRyFPomy3i
 def index():
 	return "Welcome to the Project 5 API"
 
+#post
+
+
+
+
+
+
+#get
+
+
+
+
+
+#put
+
+
+
+
+
+
+
+#delete
+
+
+
+
+
+
 # md5 hash converter
 @app.route('/md5/<string:input>', methods=['GET'])
 def get_md5(input):
