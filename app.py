@@ -24,7 +24,35 @@ def index():
 red = redis.Redis(host='redis', port=6379, db=0)
 
 
+#--------------CLI--------------#
 
+# app.py
+import argparse
+
+# this creates the parser
+my_parser = argparse.ArgumentParser(description='Executable Actions')
+
+# add the arguments
+
+my_parser.add_argument('-r', '--redis', type=int, help='Redis Database')
+
+my_parser.add_argument('-m', '--md5', type=int, help='md5 Hash Converter')
+
+my_parser.add_argument('-f', '--factorial', type=int, help='Facorial Converter')
+
+my_parser.add_argument('-fi', '--fibonacci', type=int, help='Fibonacci number to calculate')
+
+my_parser.add_argument('-v',
+                       '--verbose',
+                       action='store_true',
+                       help='an optional argument')
+
+# Execute parse_args()
+args = my_parser.parse_args()
+
+print('If you read this line it means that you have provided '
+      'all the parameters')
+	
 	
 #--------------md5 hash converter--------------#
 @app.route('/md5/<string:input>', methods=['GET'])
